@@ -1,0 +1,51 @@
+name: Windows release
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    env:
+      PUPPETEER_SKIP_DOWNLOAD: '1'
+    steps:
+      - name: Check out source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Use Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 24.14.0
+          cache: npm
+      - name: Install locked dependencies
+        run: |
+          npm ci
+          npm --prefix desktop ci
+      - name: Build portable application without personal keys
+        run: npm run desktop:build
+      - name: Verify portable startup
+        shell: pwsh
+        run: |
+          $env:ZODERISE_SMOKE_TEST = Join-Path $env:RUNNER_TEMP 'zoderise-smoke'
+          $exe = Get-ChildItem release/Zoderise-3D-Map-*-x64.exe | Select-Object -First 1
+          Start-Process -FilePath $exe.FullName -WindowStyle Hidden -Wait
+          $result = Get-Content (Join-Path $env:ZODERISE_SMOKE_TEST 'smoke-result.json') -Raw | ConvertFrom-Json
+          if (!$result.canvas -or !$result.status.ok -or $result.nodeExposed) { throw 'Portable startup verification failed' }
+      - name: Generate checksum
+        shell: pwsh
+        run: |
+          $exe = Get-ChildItem release/Zoderise-3D-Map-*-x64.exe | Select-Object -First 1
+          $digest = (Get-FileHash -LiteralPath $exe.FullName -Algorithm SHA256).Hash.ToLower()
+          Set-Content -LiteralPath release/SHA256SUMS.txt -Value ($digest + '  ' + $exe.Name) -Encoding ascii
+      - name: Publish release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $version = (Get-Content desktop/package.json -Raw | ConvertFrom-Json).version
+          gh release create "v$version" release/Zoderise-3D-Map-*-x64.exe release/SHA256SUMS.txt --target '${{ github.sha }}' --title "Zoderise 3D Map $version" --notes-file desktop/release-notes.md
