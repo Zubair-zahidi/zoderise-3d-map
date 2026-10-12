@@ -1,16 +1,30 @@
 <div align="center">
-<img src="public/logo.svg" width="96" alt="Zoderise logo">
+<img src="docs/images/banner.svg" width="100%" alt="Zoderise 3D Map — Explore Earth. Follow public signals.">
 
 # Zoderise 3D Map
 
 Explore Earth in 3D, follow public live data, and switch between cinematic map styles.
 
+[![Build checks](https://github.com/Zubair-zahidi/zoderise-3d-map/actions/workflows/ci.yml/badge.svg)](https://github.com/Zubair-zahidi/zoderise-3d-map/actions/workflows/ci.yml)
+[![Windows release](https://github.com/Zubair-zahidi/zoderise-3d-map/actions/workflows/windows-release.yml/badge.svg)](https://github.com/Zubair-zahidi/zoderise-3d-map/actions/workflows/windows-release.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-22b8cf)](LICENSE)
+
 **Zoderise · Developer & CEO: Zubair Zahidi · Kardan Private School**
 
-[Windows download](https://github.com/Zubair-zahidi/zoderise-3d-map/releases/latest) · [Run from source](#run-from-source) · [Provider setup](#use-your-own-api-keys)
+**[Download for Windows](https://github.com/Zubair-zahidi/zoderise-3d-map/releases/latest)** · [Getting started](docs/QUICK_START.md) · [Screenshot gallery](docs/GALLERY.md) · [Developer guide](docs/DEVELOPMENT.md)
 
 ![Zoderise globe](docs/images/globe.png)
 </div>
+
+## Choose your starting point
+
+| I want to… | Start here |
+|---|---|
+| Use the app without developer tools | [Download the portable Windows application](https://github.com/Zubair-zahidi/zoderise-3d-map/releases/latest) |
+| See the interface and visual styles | [Browse actual application screenshots](docs/GALLERY.md) |
+| Configure my own optional providers | [Provider setup](#use-your-own-api-keys) |
+| Run or build the project myself | [Developer guide](docs/DEVELOPMENT.md) |
+| Check a downloaded release | [Release and checksum guide](docs/RELEASES.md) |
 
 ## Features
 
@@ -96,9 +110,15 @@ For a browser production build, run **npm run build**, then **npm run preview**.
 
 Actual desktop captures using keyless map imagery:
 
-| Globe | Thermal style |
+| Earth exploration | Thermal visual style |
 |---|---|
 | ![Full Earth](docs/images/globe.png) | ![Thermal Earth](docs/images/thermal.png) |
+
+| Night-vision visual style | Retro visual style |
+|---|---|
+| ![Night-vision Earth](docs/images/surveillance.png) | ![Retro Earth](docs/images/retro.png) |
+
+[View the full gallery, including anime, noir and provider settings →](docs/GALLERY.md)
 
 ## Troubleshooting
 
@@ -112,7 +132,16 @@ Report bugs in [Issues](https://github.com/Zubair-zahidi/zoderise-3d-map/issues)
 
 ## Documentation and attribution
 
-[Detailed inherited guide](docs/UPSTREAM_GUIDE.md) · [Data sources](DATA_SOURCES.md) · [Testing](TESTING.md) · [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md) · [Third-party notices](THIRD_PARTY_NOTICES.md)
+| Guide | What it covers |
+|---|---|
+| [Quick start](docs/QUICK_START.md) | Download, first launch, navigation and provider setup |
+| [Screenshot gallery](docs/GALLERY.md) | Actual captures and visual-style examples |
+| [Development](docs/DEVELOPMENT.md) | Source setup, project structure, checks and packaging |
+| [Releases](docs/RELEASES.md) | Portable distribution, checksums and updates |
+| [Detailed inherited guide](docs/UPSTREAM_GUIDE.md) | Extended map features and upstream walkthroughs |
+| [Data sources](DATA_SOURCES.md) | Feed coverage, estimates and data attribution |
+| [Contributing](CONTRIBUTING.md) / [Testing](TESTING.md) | Contribution and verification workflows |
+| [Security](SECURITY.md) / [Third-party notices](THIRD_PARTY_NOTICES.md) | Credential handling and dependency attribution |
 
 Zoderise branding and desktop distribution are maintained by **Zubair Zahidi**, developer and CEO of **Zoderise**, with **Kardan Private School** named in the app credits.
 

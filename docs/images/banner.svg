@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="340" viewBox="0 0 1280 340" role="img" aria-labelledby="title desc">
+  <title id="title">Zoderise 3D Map</title>
+  <desc id="desc">Explore Earth. Follow public signals. A 3D globe for Windows and the browser.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#071321"/><stop offset="1" stop-color="#102c3a"/></linearGradient>
+    <linearGradient id="cyan"><stop stop-color="#4de5ff"/><stop offset="1" stop-color="#20a7df"/></linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#49d8ee" stroke-opacity=".07"/></pattern>
+  </defs>
+  <rect width="1280" height="340" rx="18" fill="url(#bg)"/>
+  <rect width="1280" height="340" rx="18" fill="url(#grid)"/>
+  <g transform="translate(1050 170)" fill="none" stroke="url(#cyan)">
+    <circle r="112" stroke-width="2"/><ellipse rx="52" ry="112" stroke-opacity=".6"/>
+    <ellipse rx="112" ry="40" stroke-opacity=".6"/><path d="M-112 0H112M0-112V112" stroke-opacity=".5"/>
+    <ellipse rx="148" ry="43" transform="rotate(-25)" stroke-opacity=".35"/>
+    <path d="M-45-43H43L-43 43H45" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="64" y="72" fill="#49dcf4" font-family="Arial,sans-serif" font-size="15" letter-spacing="5">ZODERISE / EARTH EXPLORATION</text>
+  <text x="60" y="145" fill="#f0f8ff" font-family="Arial,sans-serif" font-size="58" font-weight="700">Zoderise 3D Map</text>
+  <text x="64" y="193" fill="#b8cedd" font-family="Arial,sans-serif" font-size="24">Explore Earth. Follow public signals.</text>
+  <rect x="64" y="222" width="184" height="32" rx="16" fill="#123e50"/>
+  <text x="156" y="243" text-anchor="middle" fill="#67e7ff" font-family="Arial,sans-serif" font-size="13">WINDOWS + BROWSER</text>
+  <text x="64" y="298" fill="#9eb7c9" font-family="Arial,sans-serif" font-size="15">Zubair Zahidi · Developer &amp; CEO · Zoderise · Kardan Private School</text>
+</svg>

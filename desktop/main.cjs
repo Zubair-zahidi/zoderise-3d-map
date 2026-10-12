@@ -107,9 +107,14 @@ else {
       fs.writeFileSync(path.join(process.env.ZODERISE_SMOKE_TEST, 'smoke-result.json'), JSON.stringify(result, null, 2));
       fs.writeFileSync(path.join(process.env.ZODERISE_SMOKE_TEST, 'screenshot.png'), (await window.webContents.capturePage()).toPNG());
       if (process.env.ZODERISE_DOC_SCREENSHOTS) {
-        await window.webContents.executeJavaScript(`document.querySelector('[data-style="thermal"]')?.click()`);
-        await new Promise(resolve => setTimeout(resolve, 2500));
-        fs.writeFileSync(path.join(process.env.ZODERISE_SMOKE_TEST, 'thermal.png'), (await window.webContents.capturePage()).toPNG());
+        for (const style of ['thermal', 'surveillance', 'retro', 'anime', 'noir']) {
+          await window.webContents.executeJavaScript(`document.querySelector('[data-style="${style}"]')?.click()`);
+          await new Promise(resolve => setTimeout(resolve, 2500));
+          fs.writeFileSync(path.join(process.env.ZODERISE_SMOKE_TEST, `${style}.png`), (await window.webContents.capturePage()).toPNG());
+        }
+        await window.webContents.executeJavaScript(`document.querySelector('[data-style="normal"]')?.click(); document.querySelector('#key-setup-chip')?.click()`);
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        fs.writeFileSync(path.join(process.env.ZODERISE_SMOKE_TEST, 'providers.png'), (await window.webContents.capturePage()).toPNG());
       }
       app.quit();
     }
