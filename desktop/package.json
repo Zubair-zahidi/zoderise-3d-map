@@ -1,0 +1,23 @@
+{
+  "name": "zoderise-3d-map-desktop",
+  "version": "1.0.0",
+  "description": "Zoderise 3D Map — Zoderise, CEO and developer Zubair Zahidi, Kardan Private School",
+  "author": "Zubair Zahidi",
+  "private": true,
+  "type": "module",
+  "main": "main.cjs",
+  "scripts": { "package": "electron-builder --win portable --x64", "start": "electron ." },
+  "dependencies": { "@meri-imperiumi/eccodes-wasm": "^2.48.2", "pbf": "^5.1.2", "satellite.js": "^6.0.2", "ws": "^8.21.0", "connect": "^3.7.0", "sirv": "^3.0.0" },
+  "devDependencies": { "electron": "^42.0.0", "electron-builder": "^26.0.0" },
+  "build": {
+    "appId": "com.zoderise.map3d",
+    "electronDist": "node_modules/electron/dist",
+    "productName": "Zoderise 3D Map",
+    "copyright": "Zoderise — Developer and CEO: Zubair Zahidi",
+    "directories": { "output": "../release" },
+    "files": ["main.cjs", "runtime/**/*", "icon.png", "package.json", "!**/*.test.*", "!**/.env*"],
+    "asar": true,
+    "win": { "target": "portable", "icon": "icon.ico", "signAndEditExecutable": true },
+    "artifactName": "Zoderise-3D-Map-${version}-${arch}.${ext}"
+  }
+}

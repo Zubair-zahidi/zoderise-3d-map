@@ -1,0 +1,42 @@
+node_modules
+dist
+# Credential files. `.env` alone is not enough: Vite's loadEnv (see
+# server/standalone/vite.config.js) and scripts/setup-doctor.mjs both read the
+# full dotenv ladder — .env, .env.local, .env.<mode> and .env.<mode>.local —
+# so a key placed in any of them is live for the app. Only .env was ignored,
+# leaving the other three committable. .env.example is the tracked template.
+.env
+.env.*
+!.env.example
+*.log
+screenshots/
+qa-shots/
+output/
+.gev-logs/
+.gev-cache/
+.DS_Store
+.gstack/
+3d-models/
+pinokio/ENVIRONMENT
+pinokio/.installed
+
+# Generated desktop builds, local tests and private working files.
+release/
+desktop/runtime/
+desktop/browser-build/
+desktop/original-branding/
+desktop/download-parts/
+desktop/electron-runtime.zip
+desktop/smoke*/
+desktop/viewport*/
+desktop/portable-viewport*/
+.agents/
+*.pem
+*.key
+*.p12
+*.pfx
+desktop/download-runtime.mjs
+desktop/extract-runtime.mjs
+desktop/publish-docs.mjs
+desktop/update-package-references.mjs
+scripts/brand-zoderise.mjs
