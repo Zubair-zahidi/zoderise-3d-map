@@ -568,16 +568,16 @@ export function panelRuntime(config) {
     queued = view;
     if (started) return;
     started = true;
-    say("Loading Zoderise 3D Map…");
+    say('Loading Zoderise 3D Map…');
     startApp(url, view).catch((error) =>
       say(`Zoderise 3D Map could not load here: ${error?.message || error}.`),
     );
     setTimeout(() => {
       if (!ready)
         say(
-          "Zoderise 3D Map did not load here" +
+          'Zoderise 3D Map did not load here' +
             (blocked ? ` (${blocked})` : '') +
-            ". Use Open in Zoderise 3D Map above.",
+            '. Use Open in Zoderise 3D Map above.',
         );
     }, config.loadTimeoutMs);
   }
@@ -640,7 +640,7 @@ export function panelRuntime(config) {
     appCapabilities: { availableDisplayModes: ['inline', 'fullscreen'] },
     appInfo: {
       name: 'gods-eye-view',
-      title: "Zoderise 3D Map",
+      title: 'Zoderise 3D Map',
       version: '1.0.0',
     },
     protocolVersion: config.protocolVersion,
@@ -655,7 +655,7 @@ export function panelRuntime(config) {
     },
     (error) =>
       say(
-        "This client did not accept the Zoderise 3D Map panel" +
+        'This client did not accept the Zoderise 3D Map panel' +
           (error?.message ? `: ${error.message}` : '.'),
       ),
   );

@@ -106,10 +106,10 @@ function appBase(services) {
 
 export const showInGodsEyeView = defineTool({
   name: 'show_in_gods_eye_view',
-  title: "Show in Zoderise 3D Map",
+  title: 'Show in Zoderise 3D Map',
   description:
-    "Shows a view in Zoderise 3D Map: in clients that display apps, the live " +
-    "Zoderise 3D Map globe in the conversation; everywhere, a link that opens " +
+    'Shows a view in Zoderise 3D Map: in clients that display apps, the live ' +
+    'Zoderise 3D Map globe in the conversation; everywhere, a link that opens ' +
     'it. Pass the view another answer returned, or describe one: an area ' +
     'framed from above or a camera position, with chosen data layers, visual ' +
     'style and map, optionally following an aircraft (or riding in its ' +

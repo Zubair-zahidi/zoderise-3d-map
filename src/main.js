@@ -8,7 +8,7 @@ const application = createStandaloneApplication({
 });
 
 application.start().catch((error) => {
-  console.error("Zoderise 3D Map initialization failed:", error);
+  console.error('Zoderise 3D Map initialization failed:', error);
   const loaderStatus = document.querySelector('#loading-screen .loader-status');
   loaderStatus.textContent = `Error: ${describeError(error)}`;
   loaderStatus.style.color = '#ff4444';

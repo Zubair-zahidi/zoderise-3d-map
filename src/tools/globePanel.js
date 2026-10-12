@@ -115,8 +115,8 @@ export function createGlobePanelResource({ runtime, panelKey }) {
   return Object.freeze({
     uri: GLOBE_PANEL_URI,
     name: 'globe',
-    title: "Zoderise 3D Map globe",
-    description: "Live Zoderise 3D Map, showing the view a tool returns.",
+    title: 'Zoderise 3D Map globe',
+    description: 'Live Zoderise 3D Map, showing the view a tool returns.',
     mimeType: MCP_APP_MIME_TYPE,
     text: panelHtml(runtime, panelKey),
     _meta: {

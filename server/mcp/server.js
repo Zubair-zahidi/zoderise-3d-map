@@ -18,9 +18,9 @@ const INSTRUCTIONS =
   "Tools answer questions from Zoderise 3D Map's live public data. Location " +
   'tools take an area: a place name, a bbox, or lat/lon with radius_km. ' +
   'Results are capped; check truncated and total before concluding there is nothing more. ' +
-  "Answers that can be shown in Zoderise 3D Map include data.view; to show one, call " +
+  'Answers that can be shown in Zoderise 3D Map include data.view; to show one, call ' +
   'show_in_gods_eye_view with that view, adding layers, style, a camera or marks as ' +
-  "needed. It shows live Zoderise 3D Map where the client displays apps and " +
+  'needed. It shows live Zoderise 3D Map where the client displays apps and ' +
   'returns a link everywhere.';
 
 /** Construct the local MCP server for Core's tools. */

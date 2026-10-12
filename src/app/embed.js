@@ -86,7 +86,7 @@ export function keepPanelRendering(
     (_scene, error) => {
       failed = true;
       console.error(
-        "[Zoderise 3D Map panel] render error:",
+        '[Zoderise 3D Map panel] render error:',
         describeError(error),
       );
     },
