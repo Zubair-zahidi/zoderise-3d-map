@@ -1,14 +1,14 @@
-# Contributing to God's Eye View
+# Contributing to Zoderise 3D Map
 
-Thanks for being here. God's Eye View is an open foundation for live spatial intelligence in the browser, and it gets better when more people run it, break it, and extend it.
+Thanks for being here. Zoderise 3D Map is an open foundation for live spatial intelligence in the browser, and it gets better when more people run it, break it, and extend it.
 
 ## Getting set up
 
 Use Node.js 24.14.x or 26.x (also enforced by `package.json`).
 
 ```bash
-git clone https://github.com/bilawalsidhu/gods-eye-view.git
-cd gods-eye-view
+git clone https://github.com/Zubair-zahidi/zoderise-3d-map.git
+cd zoderise-3d-map
 nvm install 24.14.0
 nvm use 24.14.0
 npm install
@@ -155,7 +155,7 @@ ownership and adoption process.
 
 ## Maintainers
 
-God's Eye View is maintained by [Bilawal Sidhu](https://github.com/bilawalsidhu)
+Zoderise 3D Map is maintained by [Bilawal Sidhu](https://github.com/bilawalsidhu)
 and [Sameh Khamis](https://github.com/samehkhamis) at
 [Halfpixel](https://halfpixel.ai). Either maintainer can review and merge
 contributions.

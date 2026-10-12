@@ -38,5 +38,6 @@ desktop/portable-viewport*/
 desktop/download-runtime.mjs
 desktop/extract-runtime.mjs
 desktop/publish-docs.mjs
+desktop/publish-metadata.mjs
 desktop/update-package-references.mjs
 scripts/brand-zoderise.mjs
