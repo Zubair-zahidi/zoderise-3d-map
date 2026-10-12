@@ -14,7 +14,7 @@ Explore Earth in 3D, follow public live data, and switch between cinematic map s
 **[Download for Windows](https://github.com/Zubair-zahidi/zoderise-3d-map/releases/latest)** · [Getting started](docs/QUICK_START.md) · [Screenshot gallery](docs/GALLERY.md) · [Developer guide](docs/DEVELOPMENT.md)
 
 <picture>
-  <img src="https://raw.githubusercontent.com/Zubair-zahidi/zoderise-3d-map/main/docs/images/styles-demo.gif" width="800" height="463" alt="Animated preview of Zoderise map styles">
+  <img src="https://raw.githubusercontent.com/Zubair-zahidi/zoderise-3d-map/main/docs/images/styles-demo.gif" width="800" alt="Animated preview of Zoderise map styles">
 </picture>
 </div>
 
@@ -23,7 +23,7 @@ Explore Earth in 3D, follow public live data, and switch between cinematic map s
 These GIFs are recordings of the actual Zoderise desktop application with keyless imagery. The preview above cycles through Normal, FLIR, NVG, Retro, Anime and Noir. Below, the original map controls zoom in and out.
 
 <picture>
-  <img src="https://raw.githubusercontent.com/Zubair-zahidi/zoderise-3d-map/main/docs/images/zoom-demo.gif" width="800" height="463" alt="Actual map zoom animation">
+  <img src="https://raw.githubusercontent.com/Zubair-zahidi/zoderise-3d-map/main/docs/images/zoom-demo.gif" width="800" alt="Actual map zoom animation">
 </picture>
 
 ### Application screenshots

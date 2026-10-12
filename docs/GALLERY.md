@@ -9,7 +9,7 @@ Actual captures of Zoderise 3D Map using keyless imagery and no configured perso
 Watch the actual application switch between its existing map styles.
 
 <picture>
-  <img src="https://raw.githubusercontent.com/Zubair-zahidi/zoderise-3d-map/main/docs/images/styles-demo.gif" width="800" height="463" alt="Animated map-style demonstration">
+  <img src="https://raw.githubusercontent.com/Zubair-zahidi/zoderise-3d-map/main/docs/images/styles-demo.gif" width="800" alt="Animated map-style demonstration">
 </picture>
 
 ## Animated zoom preview
@@ -17,7 +17,7 @@ Watch the actual application switch between its existing map styles.
 The original map controls zoom in and out in a recorded desktop session.
 
 <picture>
-  <img src="https://raw.githubusercontent.com/Zubair-zahidi/zoderise-3d-map/main/docs/images/zoom-demo.gif" width="800" height="463" alt="Actual map zoom demonstration">
+  <img src="https://raw.githubusercontent.com/Zubair-zahidi/zoderise-3d-map/main/docs/images/zoom-demo.gif" width="800" alt="Actual map zoom demonstration">
 </picture>
 
 ## Earth exploration
