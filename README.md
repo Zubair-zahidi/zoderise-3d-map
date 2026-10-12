@@ -20,6 +20,12 @@ Explore Earth in 3D, follow public live data, and switch between cinematic map s
 - Scene tools, tracking and optional voice control.
 - Portable Windows application that runs without Node.js or an editor.
 
+Nineteen layers and map sources. **Seventeen have a keyless path.**
+
+**Sits on the real ground.** Entity heights are aligned to work with Google 3D tiles, so aircraft park on aprons and cameras stand on street corners instead of floating.
+
+Use DISPLAY ▸ **Draw** to annotate the map with shapes and routes. See the detailed guide for drawing controls and scene tools.
+
 Feed coverage varies. Some layers are simulated or estimated; see [data sources](DATA_SOURCES.md). Optional photorealistic 3D services require your own provider credentials.
 
 ## Windows application

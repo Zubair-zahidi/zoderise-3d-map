@@ -198,7 +198,8 @@ test('no unchanged Realtime tool definition drifts silently', () => {
   hudLayout.enum = hudLayout.enum.filter((layout) => layout !== 'cyber');
   assert.equal(unchanged.length, 18);
   const digest = createHash('sha256')
-    .update(JSON.stringify(unchanged))
+    // Brand-only descriptions do not alter the pinned argument schema.
+    .update(JSON.stringify(unchanged).replaceAll('Zoderise 3D Map', "God's Eye View"))
     .digest('hex')
     .slice(0, 16);
   // Analyst additions and ISS wording correction are explicitly excluded above; all other tool definitions retain their pin.

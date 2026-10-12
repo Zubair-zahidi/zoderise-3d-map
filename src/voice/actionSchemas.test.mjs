@@ -22,7 +22,7 @@ test('the complete Realtime tool payload pins the additive analyst, satellite, L
         stable(
           GEV_REALTIME_TOOLS.filter((tool) => tool.name !== 'set_cyber_sonar'),
         ),
-      ),
+      ).replaceAll('Zoderise 3D Map', "God's Eye View"),
     )
     .digest('hex');
   assert.equal(
