@@ -15,7 +15,9 @@ Download the .exe below and double-click it. No Node.js, editor or developer pla
 
 [First-launch guide](https://github.com/Zubair-zahidi/zoderise-3d-map/blob/main/docs/QUICK_START.md) · [Full screenshot gallery](https://github.com/Zubair-zahidi/zoderise-3d-map/blob/main/docs/GALLERY.md) · [Download verification](https://github.com/Zubair-zahidi/zoderise-3d-map/blob/main/docs/RELEASES.md)
 
-![Actual keyless globe view](https://raw.githubusercontent.com/Zubair-zahidi/zoderise-3d-map/main/docs/images/globe.png)
+![Animated preview of the actual application](https://raw.githubusercontent.com/Zubair-zahidi/zoderise-3d-map/main/docs/images/styles-demo.gif)
+
+![Original map controls zoom in and out](https://raw.githubusercontent.com/Zubair-zahidi/zoderise-3d-map/main/docs/images/zoom-demo.gif)
 
 ## Included in this release
 

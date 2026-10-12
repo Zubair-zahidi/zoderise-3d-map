@@ -106,6 +106,29 @@ else {
       fs.mkdirSync(process.env.ZODERISE_SMOKE_TEST, { recursive: true });
       fs.writeFileSync(path.join(process.env.ZODERISE_SMOKE_TEST, 'smoke-result.json'), JSON.stringify(result, null, 2));
       fs.writeFileSync(path.join(process.env.ZODERISE_SMOKE_TEST, 'screenshot.png'), (await window.webContents.capturePage()).toPNG());
+      if (process.env.ZODERISE_DOC_GIFS) {
+        const capture = async (name, index) => fs.writeFileSync(path.join(process.env.ZODERISE_SMOKE_TEST, `${name}-${String(index).padStart(3, '0')}.png`), (await window.webContents.capturePage()).toPNG());
+        let frame = 0;
+        for (const style of ['normal', 'thermal', 'surveillance', 'retro', 'anime', 'noir']) {
+          await window.webContents.executeJavaScript(`document.querySelector('[data-style="${style}"]')?.click()`);
+          await new Promise(resolve => setTimeout(resolve, 700));
+          for (let i = 0; i < 5; i++) {
+            await capture('styles', frame++);
+            await new Promise(resolve => setTimeout(resolve, 180));
+          }
+        }
+        await window.webContents.executeJavaScript(`document.querySelector('[data-style="normal"]')?.click(); document.querySelector('#reset-globe-view')?.click()`);
+        await new Promise(resolve => setTimeout(resolve, 3500));
+        frame = 0;
+        await capture('zoom', frame++);
+        for (const delta of [-80, 80]) {
+          await window.webContents.executeJavaScript(`document.querySelector('#cesiumContainer canvas').dispatchEvent(new WheelEvent('wheel', {clientX:innerWidth/2,clientY:innerHeight/2,deltaY:${delta},deltaMode:0,bubbles:true,cancelable:true}))`);
+          for (let i = 0; i < 12; i++) {
+            await new Promise(resolve => setTimeout(resolve, 110));
+            await capture('zoom', frame++);
+          }
+        }
+      }
       if (process.env.ZODERISE_DOC_SCREENSHOTS) {
         for (const style of ['thermal', 'surveillance', 'retro', 'anime', 'noir']) {
           await window.webContents.executeJavaScript(`document.querySelector('[data-style="${style}"]')?.click()`);

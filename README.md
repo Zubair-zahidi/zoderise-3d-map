@@ -13,8 +13,26 @@ Explore Earth in 3D, follow public live data, and switch between cinematic map s
 
 **[Download for Windows](https://github.com/Zubair-zahidi/zoderise-3d-map/releases/latest)** · [Getting started](docs/QUICK_START.md) · [Screenshot gallery](docs/GALLERY.md) · [Developer guide](docs/DEVELOPMENT.md)
 
-![Zoderise globe](docs/images/globe.png)
+![Animated preview of Zoderise map styles](docs/images/styles-demo.gif)
 </div>
+
+## See the application in action
+
+These GIFs are recordings of the actual Zoderise desktop application with keyless imagery. The preview above cycles through Normal, FLIR, NVG, Retro, Anime and Noir. Below, the original map controls zoom in and out.
+
+![Actual map zoom animation](docs/images/zoom-demo.gif)
+
+### Application screenshots
+
+| Full Earth | FLIR visual style |
+|---|---|
+| ![Zoderise full Earth](docs/images/globe.png) | ![FLIR globe](docs/images/thermal.png) |
+
+| Night vision | Retro display |
+|---|---|
+| ![Night-vision style](docs/images/surveillance.png) | ![Retro style](docs/images/retro.png) |
+
+[Open all seven screenshots and animated previews →](docs/GALLERY.md)
 
 ## Choose your starting point
 
@@ -106,17 +124,17 @@ The executable is created in **release/**. Share the .exe alone. The desktop bui
 
 For a browser production build, run **npm run build**, then **npm run preview**. Browser builds use browser-provider settings at build time: do not publish a bundle containing personal credentials.
 
-## Screenshots
+## More interface views
 
 Actual desktop captures using keyless map imagery:
 
-| Earth exploration | Thermal visual style |
+| Anime visual style | Noir visual style |
 |---|---|
-| ![Full Earth](docs/images/globe.png) | ![Thermal Earth](docs/images/thermal.png) |
+| ![Anime Earth](docs/images/anime.png) | ![Noir Earth](docs/images/noir.png) |
 
-| Night-vision visual style | Retro visual style |
-|---|---|
-| ![Night-vision Earth](docs/images/surveillance.png) | ![Retro Earth](docs/images/retro.png) |
+### Your own provider settings
+
+![POWER UP panel with empty credential fields](docs/images/providers.png)
 
 [View the full gallery, including anime, noir and provider settings →](docs/GALLERY.md)
 

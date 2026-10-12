@@ -9,6 +9,8 @@ The PNG files in this directory are actual Zoderise 3D Map desktop captures usin
 - `anime.png`: illustrated display style.
 - `noir.png`: monochrome display style.
 - `providers.png`: the POWER UP provider-settings panel with empty credential fields.
+- `styles-demo.gif`: a looping recording of the application's existing map styles.
+- `zoom-demo.gif`: a recording of zoom in and out using the original map controls.
 
 The display styles apply visual effects to map imagery; they are not actual thermal or night-vision observations. The SVG banner is native vector artwork for the Zoderise repository presentation.
 

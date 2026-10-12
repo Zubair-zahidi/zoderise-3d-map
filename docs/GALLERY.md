@@ -4,6 +4,18 @@
 
 Actual captures of Zoderise 3D Map using keyless imagery and no configured personal provider credentials. These show the application interface, rather than concept mockups. NVG and FLIR are visual styles, not real sensor readings.
 
+## Animated style preview
+
+Watch the actual application switch between its existing map styles.
+
+![Animated map-style demonstration](images/styles-demo.gif)
+
+## Animated zoom preview
+
+The original map controls zoom in and out in a recorded desktop session.
+
+![Actual map zoom demonstration](images/zoom-demo.gif)
+
 ## Earth exploration
 
 The full globe with the Zoderise interface, navigation controls and public map attribution.
