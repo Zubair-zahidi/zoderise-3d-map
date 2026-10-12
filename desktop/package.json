@@ -6,7 +6,7 @@
   "private": true,
   "type": "module",
   "main": "main.cjs",
-  "scripts": { "package": "electron-builder --win portable --x64", "start": "electron ." },
+  "scripts": { "package": "electron-builder --win portable --x64 --publish never", "start": "electron ." },
   "dependencies": { "@meri-imperiumi/eccodes-wasm": "^2.48.2", "pbf": "^5.1.2", "satellite.js": "^6.0.2", "ws": "^8.21.0", "connect": "^3.7.0", "sirv": "^3.0.0" },
   "devDependencies": { "electron": "^42.0.0", "electron-builder": "^26.0.0" },
   "build": {

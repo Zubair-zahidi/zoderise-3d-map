@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import sharp from 'sharp';
 import { BROWSER_HEADERS } from '../build/vite.js';
+execFileSync(process.execPath, ['desktop/node_modules/electron/install.js'], { stdio: 'inherit' });
 execFileSync(process.execPath, ['node_modules/vite/bin/vite.js', 'build', '--outDir', 'desktop/browser-build'], { stdio: 'inherit', env: { ...process.env, GOOGLE_MAPS_API_KEY: '__ZODERISE_GOOGLE_KEY__', CESIUM_ION_TOKEN: '__ZODERISE_CESIUM_TOKEN__' } });
 fs.mkdirSync('desktop/runtime', { recursive: true });
 fs.cpSync('desktop/browser-build', 'desktop/runtime/dist', { recursive: true });
